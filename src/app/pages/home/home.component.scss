@@ -1,6 +1,33 @@
-div p{
-    color: blue;
-    &:hover{
-        color: red;
-    }
+*{
+margin: 0;
+padding: 0;
+}
+.body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffff00;
+  align-items: center;
+  // justify-content: center;
+  // position: absolute;
+}
+.center {
+  width: 500px;
+  height: 500px;
+  background-color: green;
+  position: absolute;
+
+  // position: sticky;
+  top: 50%;
+  left: 50%;
+  // margin: auto;
+  transform: translate(-50%,-50%);
+}
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  // position: fixed;
+  // top: 40%;
 }
