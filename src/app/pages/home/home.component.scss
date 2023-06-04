@@ -1,29 +1,8 @@
-//centering the element using flex
-
-*{
-margin: 0;
-padding: 0;
-}
-.body {
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  height: 100vh;
-  background-color: #ffff00;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.center {
-  width: 500px;
-  height: 500px;
-  background-color: green;
-  position: absolute;
-
-}
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-
+.product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
 }

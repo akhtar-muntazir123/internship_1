@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project_1": {
+    "internproject": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/project_1",
+            "outputPath": "dist/internproject",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -56,7 +56,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
@@ -65,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "project_1:build:production"
+              "browserTarget": "internproject:build:production"
             },
             "development": {
-              "browserTarget": "project_1:build:development"
+              "browserTarget": "internproject:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "project_1:build"
+            "browserTarget": "internproject:build"
           }
         },
         "test": {
@@ -102,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "5e4071a4-774c-4a04-b959-b158ebf12fdc"
+    "analytics": "7eadbeb5-071e-48d7-aaeb-c95815a669a7"
   }
 }
